@@ -2,12 +2,14 @@ version: "3"
 
 services:
   backend:
+    container_name: pg_demo
     image: arpit9667/pg-demo
     ports:
       - "5000:5000"
     depends_on: 
       - postgres
   postgres:
+    container_name: postgres
     image: postgres
     environment:
       POSTGRES_DB: codegig
